@@ -1,0 +1,68 @@
+
+work for date : 15-05-24
+tommorow working on add section 
+if suuccessfully done with add section then focusing on view section.
+
+
+
+
+
+
+
+planning as of 16-05-24
+--------------------------
+
+
+branches (possiblities) of the code
+
+first input is to provide what user what to perfom add, view, edit or remove 
+
+                            asking user what to do with todo list
+                                      |
+                                      |
+                                    typed
+                                      |
+      ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      |                               |                   |                                                                                                             |                                                                 |
+      |                               |                   |                                                                                                             |                                                                 |                
+      add                             |                  view                                                                                                           |                                                                 |   
+      |                               |                   |                                                                                                             |                                                                 |                
+giving instructions                   |           ---------------------                                                                                                edit                                                             remove                       
+      |                               |           |                    |                                                                                                |                                                                 |                         
+ giving them form                     |       view all         priority vise viewing                                                                   -----------------------------------------              ---------------------------------------------------------
+      |                               |           |                    |                                                                                                |                                                                 |
+taking input from user                |  showing the user  |  first giving them option                                                                                  |                                                                 |         
+      |                               |full list of todo   |  wheather they want to view  -------> if input is nor high, medium or low                                  |                                                                 |                           
+  storing the inputs in the todo      |         |          |   high, medium or low prioriyt                  |                                                          |                                                               asking user 
+      |                               |         |          |           |                            show user an error which tells him you can only                     |                                                        what he want to remove                                                                               
+showing them successfull message      |         |          |   according to input show the              input this 3 and try agin go to view again.                     |                                                                  |                                                                
+      |                               |         |          |  suer ouput                                                                                                |                                                            successfull removed message
+  clearning console                   |         |          |                         |                                                                                  |                                                                  |
+      |                               |         |                                    |                                                                                  |                                                               clear screen
+asking user is he                     |         |                                    |                                                                                  |                                                                  |
+done with makin list?                 |         |                                    |                                                                                  |                                                            asking him again what he want to do 
+      |                               |         |                                    |                                                                                  |                                                               with the saved list
+if yes then quit end of code or       |         |                                    |                                                                                  |                         
+no then, start again from asking user |         |                                    |                                                                                  |                         
+what to do with todo list             |         |                                    |                                                                                  |                         
+                                      |         |                                    |                                                                                  |                         
+                                      |         |                                    |                                                                                  |                         
+                                      |         |                                    |                                                                                  |                         
+                                      |         |                                    |                                                                      asking them what they                                                                         
+                                                |                                    |                                                                      want to edit      
+                                                |                                    |                                                                                  |                
+                                                |                                    |                                                                      successfully edited
+                                                |                                    |                                                                                  |
+                                                |                                    |                                                                        asking done with making of list
+                                                |                                    |                                                                                  |
+                                                |                                    |                                                                        if yes then quit or else show
+                                                |                                    |                                                                        them again the what they want to 
+                                                |                                    |                                                                        perfom with the list
+                                                |                                    |
+                                          successful view message                    |
+                                                |                   <-----------------             
+                                        asking donw with the code or do 
+                                        add more or etc
+                                                |
+                                        if yes then quit the code or else
+                                        show him menu again

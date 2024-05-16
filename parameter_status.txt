@@ -1,0 +1,49 @@
+
+parameter              status
+----------            ----------
+
+
+menu                   error handline is done
+
+----------------------------------------------------------------------------------------------
+
+add                    done currently doing error handling (final check is still pending)
+
+--------------------------------------------------------------------------------------------------------
+
+view                    view all done currently doing error handling (final check is still pending) and view by priroity done currently doing error handling (final check is pending)
+
+-----------------------------------------------------------------------------------------------------
+
+edit                    remeaning, AFTER remeaning testing will be done, and after testing final check will be done
+
+------------------------------------------------------------------------------------------------------
+
+remove                  remeaning, AFTER remeaning testing will be done, and after testing final check will be done
+
+-----------------------------------------------------------------------------------------------------
+
+error 
+handling                remeaning, AFTER remeaning testing will be done, and after testing final check will be done
+
+
+-------------------------------------------------------------------------------------------
+
+decoration            remeaning, AFTER remeaning testing will be done, and after testing final check will be done
+
+
+-----------------------------------------------------------------------------------------
+
+
+final check of          remaning, AFTER remeaning testing will be done, and after testing final check will be done
+reposive ness        
+
+------------------------------------------------------------------------------------------
+
+
+final cross check      remeaning, AFTER remeaning testing will be done, and after testing final check will be done
+
+
+---------------------------------------------------------------------------------
+
+PUBLISH                REMEANING  
