@@ -27,21 +27,33 @@ user_Todo_data = [['SR.NO', 'TASK', 'DUE DATE', 'IMP LEVEL'],
 # print(user_Todo_data)
 sr_no = 0
 intro_only1 = True
+iteratino = 0
 while True:
   if intro_only1 is True:
     print(
         blue,
-        '\n ----------------------> Welcome to ToDay Manager <------------------------------'
+        '\n\n ----------------------> Welcome to ToDay Manager <------------------------------'
     )
     print(red, '                          -------------------------\n\n',
           white)
     intro_only1 = False
   # print(f'{white}')
+  print()
+  print()
+  print()
   menu = input(
       '\nDo you want to add, view, edit or remove from the to do list 🤔 ---> '
   ).strip().lower()
 
   if menu == 'add':
+    if iteratino >= 2:
+      print(
+          blue,
+          '\n\n ----------------------> Welcome to ToDay Manager <-----------  -------------------'
+      )
+      print(red, '                          -------------------------\n\n  ',
+            white)
+    iteratino += 1
     sr_no += 1
     print(
         f'\n{red} currently Sr.no {sr_no} is going on. Make sure you fill number {sr_no} in sr.no section while adding task\n\n'
@@ -68,11 +80,17 @@ while True:
         ).strip().capitalize().split())
     print(green, '\nThanks, this task has been added.', white)
     # time.sleep(2)
-    print('clearing..')
+    # print('clearing..')
     # time.sleep(3)
-    os.system('clear')
+    # os.system('clear')
 #---------------------------------------------------------------
   elif menu == 'view':
+    print(
+        blue,
+        '\n\n ----------------------> Welcome to ToDay Manager <------------------------------'
+    )
+    print(red, '                          -------------------------\n\n',
+          white)
     print(purple)
     view_menu = input(
         "\n\nPress '1' for view all.\n\nPress '2' for view by Priority.\n\nenter the nubmer over here ----> "
@@ -88,39 +106,59 @@ while True:
 
     elif view_menu == '2':
       dicide_priority = input(
-          "What's the level priority?\n\n Press 1 for low\n\nPress 2 for medium\n\nPress 3 for high)----> "
+          "What's the level priority?\n\nPress 1 for low\n\nPress 2 for medium\n\nPress 3 for high)----> "
       ).strip().lower()
       if dicide_priority == '1':
+        low_priority_found = False
         for row in user_Todo_data:
           for item in row:
             if item == 'low':
+              low_priority_found = True
               print()
               print()
               print()
               for item in row:
                 print(f'{item:^20}', end=' | ')
+        if not low_priority_found:
+          print(red, '\n\nThere is nothing in low priority 😑')
+
       elif dicide_priority == '2':
+        no_medium = False
         for row in user_Todo_data:
           for item in row:
             if item == 'medium':
+              no_medium = True
               print()
               print()
               print()
               for item in row:
                 print(f'{item:^20}', end=' | ')
+        if not no_medium:
+          print(red, '\n\nThere is nothing in medium priority 😑')
+
       elif dicide_priority == '3':
+        no_high = False
         for row in user_Todo_data:
           for item in row:
             if item == 'high':
+              no_high = True
               print()
               print()
               print()
               for item in row:
                 print(f'{item:^20}', end=' | ')
+        if not no_high:
+          print(red, '\n\nThere is nothing in high priority 😑')
 
     print(white)
 #-------------------------------------------------------------------
   elif menu == 'edit':
+    print(
+        blue,
+        '\n ----------------------> Welcome to ToDay Manager <------------------------------'
+    )
+    print(red, '                          -------------------------\n\n',
+          white)
     print(yellow)
     for row in user_Todo_data:
       for item in row:
@@ -158,6 +196,12 @@ while True:
                   print('successfully updated')
 
   elif menu == 'remove':
+    print(
+        blue,
+        '\n ----------------------> Welcome to ToDay Manager <------------------------------'
+    )
+    print(red, '                          -------------------------\n\n',
+          white)
     print(blue)
     decide_remove = input(
         'which entry you want to remove? (choose by TASK NAME) ----> ').strip(
@@ -188,8 +232,19 @@ while True:
   exit_or_continue = input(
       'are you done with your Todo list? (yes or no)  ----> ').strip().lower()
   if exit_or_continue == 'yes':
-    print('\nsee you in the next time')
-    break
+    os.system('clear')
+    print(
+        green,
+        "\nsee you in the next time\n\nhere's your final TOdo make sure to take a screenshot of it.👍"
+    )
+    print()
+    print()
+    print(white)
+    for row in user_Todo_data:
+      for iteam in row:
+        print(f'{iteam:^20}', end=' | ')
+      print()
+    exit()
   else:
     print('\nclearing the history also stroing it in our cloud')
     # time.sleep(4)
