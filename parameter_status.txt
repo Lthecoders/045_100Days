@@ -47,3 +47,16 @@ final cross check      remeaning, AFTER remeaning testing will be done, and afte
 ---------------------------------------------------------------------------------
 
 PUBLISH                REMEANING  
+
+
+for row in range(3):
+for item in range(3):
+  if user_Todo_data[row][item] == what_to_edit:
+    editdf = input('what you want to change it from  --> ')
+    user_Todo_data[row][item] = editdf
+
+    print('successfully updated')
+for row in user_Todo_data:
+  for iteam in row:
+    print(f'{iteam:^20}', end=' | ')
+  print()

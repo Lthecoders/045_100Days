@@ -13,18 +13,24 @@ white = '\033[0m'
 user_Todo_data = [['SR.NO', 'TASK', 'DUE DATE', 'IMP LEVEL'],
                   ['-----', '-----', '-----', '-----']]
 
-# print(yellow,
-#   '\nIN ONRDER TO GET PERFECT EXPERIENCE, MAKE SURE YOUR AREA OF CONSOLE OR TERMINAL IS BIG IN TERMS OF SIZE\n'
-# )
-# print(
-#   '\nADVICE ---> full your console or terminal size atlest till run button\n',white
-# )
-# time.sleep(6)
-# print('\nloading....')
-# print('\nplease wait... till then read the instructions above ⬆️⬆️⬆️⬆️⬆️\n')
-# # time.sleep(10)
-# os.system('clear')
+print(
+    yellow,
+    '\nIN ONRDER TO GET PERFECT EXPERIENCE, MAKE SURE YOUR AREA OF CONSOLE OR TERMINAL IS BIG IN TERMS OF SIZE\n'
+)
+print(
+    '\nADVICE ---> full your console or terminal size atlest till run button\n',
+    white)
+time.sleep(6)
+print('\nloading....')
+print('\nplease wait... till then read the instructions above ⬆️⬆️⬆️⬆️⬆️\n')
+time.sleep(10)
+os.system('clear')
 # print(user_Todo_data)
+
+#----------------------------------------- phase 2
+
+#----------------------------------------- phase 1
+
 sr_no = 0
 intro_only1 = True
 iteratino = 0
@@ -79,10 +85,10 @@ while True:
             '\n\n\n-----> KINDLY READ INSTRUCTIONS FIRST. Pressenig space bar after every requirments in one line over here ---> '
         ).strip().capitalize().split())
     print(green, '\nThanks, this task has been added.', white)
-    # time.sleep(2)
-    # print('clearing..')
-    # time.sleep(3)
-    # os.system('clear')
+    time.sleep(2)
+    print('clearing..')
+    time.sleep(3)
+    os.system('clear')
 #---------------------------------------------------------------
   elif menu == 'view':
     print(
@@ -153,6 +159,7 @@ while True:
     print(white)
 #-------------------------------------------------------------------
   elif menu == 'edit':
+    os.system('clear')
     print(
         blue,
         '\n ----------------------> Welcome to ToDay Manager <------------------------------'
@@ -160,40 +167,25 @@ while True:
     print(red, '                          -------------------------\n\n',
           white)
     print(yellow)
+
     for row in user_Todo_data:
-      for item in row:
-        print(item, end=' | ')
-    edit_menu = input('\nWhat do you want to edit? ----> (CHOOSE BY TASK NAME)'
-                      ).strip().capitalize()
-    for row in user_Todo_data:
-      for item in row:
-        if edit_menu in item:
-          # print(item)
-          decide_edit = input(
-              'what you want to edit from the above entry? ()----> ').strip(
-              ).lower()
-          for row in user_Todo_data:
-            for item in row:
-              if decide_edit in item:
-                user_Todo_data.remove(decide_edit)
-                new_entry = input(
-                    "what you want to edit Task, Date or Priority? ----> "
-                ).strip().lower()
-                if new_entry == 'task':
-                  user_Todo_data.append(
-                      input('\nWhat is the task? ----> ').strip().capitalize())
-                  print('successfully updated')
-                elif new_entry == 'date':
-                  user_Todo_data.append(
-                      input(
-                          '\nWhen it is due by? (date)----> ').strip().lower())
-                  print('successfully updated')
-                elif new_entry == 'priority':
-                  user_Todo_data.append(
-                      input(
-                          '\nWhat is the Priority level? (low, medium or high) ----> '
-                      ).strip().capitalize())
-                  print('successfully updated')
+      for iteam in row:
+        print(f'{iteam:^20}', end=' | ')
+      print()
+    what_to_edit = input(
+        '\n\n\nwhat you want to edit from the above entry? whatever you want to edit  ----> '
+    )
+    for row in range(3):
+      for item in range(3):
+        if user_Todo_data[row][item] == what_to_edit:
+          editdf = input('what you want to change it from  --> ')
+          user_Todo_data[row][item] = editdf
+
+          print('successfully updated')
+      for row in user_Todo_data:
+        for iteam in row:
+          print(f'{iteam:^20}', end=' | ')
+        print()
 
   elif menu == 'remove':
     print(
@@ -203,27 +195,32 @@ while True:
     print(red, '                          -------------------------\n\n',
           white)
     print(blue)
+    for row in user_Todo_data:
+      for iteam in row:
+        print(f'{iteam:^20}', end=' | ')
+      print()
     decide_remove = input(
         'which entry you want to remove? (choose by TASK NAME) ----> ').strip(
         ).lower()
     for row in user_Todo_data:
-      for item in row:
-        if decide_remove in item:
-          user_Todo_data.remove(item)
-          print('successfully removed')
-          print("\nhere's the updated list\n")
-          for row in user_Todo_data:
-            for item in row:
-              print(item, end=' | ')
-        else:
-          print(f"this entry {decide_remove} is not present in the todo list")
+      if decide_remove in row:
+        user_Todo_data.remove(row)
+        print('successfully removed')
+        print("\nhere's the updated list\n")
+        for row in user_Todo_data:
+          for iteam in row:
+            print(f'{iteam:^20}', end=' | ')
+          print()
 
-  else:
-    print(red)
+    print('\n\nclearing...')
+    time.sleep(7)
+    os.system('clear')
     print(
-        'ERROR!!! please choose from the above option. Make sure your spelling is correct\n\n',
-        white)
-    continue
+        blue,
+        '\n\n ----------------------> Welcome to ToDay Manager <------------------------------'
+    )
+    print(red, '                          -------------------------\n\n',
+          white)
 
   print(white)
   print()
@@ -247,6 +244,6 @@ while True:
     exit()
   else:
     print('\nclearing the history also stroing it in our cloud')
-    # time.sleep(4)
+    time.sleep(4)
     os.system('clear')
     continue
